@@ -24,7 +24,6 @@ Execute the program using runserver command.
 
 # PROGRAM
 ```
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
