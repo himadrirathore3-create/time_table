@@ -157,6 +157,7 @@ def term_timetable(request: HttpRequest) -> HttpResponse:
     }
     return render(request, "timetable/slottimetable.html", context)
 ```
+.html
 ```
 <html lang="en">
 <head>
