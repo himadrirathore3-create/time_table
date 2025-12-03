@@ -36,13 +36,12 @@ urlpatterns = [
 ```
 views.py
 ```
-from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-def term_timetable(request: HttpRequest) -> HttpResponse:
-    return render(request, "timetable/slottimetable.html", context)
+def term_timetable(request):
+    return render(request, "timetable/slottimetable.html",)
 ```
-.html
+slotimetable.html
 ```
 <html lang="en">
 <head>
