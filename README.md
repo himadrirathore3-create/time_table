@@ -26,30 +26,20 @@ Execute the program using runserver command.
 urls.py
 ```
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from table import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('timetable.urls')),
+    path('slot', include('timetable.urls')),
 ]
 ```
 views.py
 ```
-from __future__ import annotations
-
-from typing import Any, Dict, List
-
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
 def term_timetable(request: HttpRequest) -> HttpResponse:
-    """Render the term timetable page."""
-    context = {
-        "days": DAYS,
-        "time_slots": TIME_SLOTS,
-        "timetable_rows": TIMETABLE_ROWS,
-        "courses": COURSES,
-    }
     return render(request, "timetable/slottimetable.html", context)
 ```
 .html
